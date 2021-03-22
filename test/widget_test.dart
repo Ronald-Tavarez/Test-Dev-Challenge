@@ -8,12 +8,8 @@ import 'package:test_dev/widgets/heading.dart';
 void main() {
 
   testWidgets("headings contain supplied test on init", (WidgetTester tester) async {
-    await tester.pumpWidget(Heading(key: ValueKey('heading'), text: 'test_000_heading'));
-
+    await tester.pumpWidget(Heading(text: 'test_000_heading'));
     final textFind = find.text('test_000_heading');
-    final keyFind = find.byKey(ValueKey('heading'));
-
     expect(textFind, findsOneWidget);
-    expect(keyFind, findsOneWidget);
   });
 }

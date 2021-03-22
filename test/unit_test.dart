@@ -23,7 +23,7 @@ void main() {
         QuestionModel('Mock Generated', ['mock', 'real'], 'mock')
         ),
       );
-    await quizController.requestQuestion();
+    await quizController.setQuestion();
     expect(quizController.currentQuestion.text, 'Mock Generated');
   });
 
